@@ -21,7 +21,7 @@ class Tab2Fragment : Fragment(R.layout.fragment_tab2) {
 
     }
 
-    interface OnFragmentInteractionListener {
-        fun onFragmentInteraction(uri: Uri)
-    }
+//    interface OnFragmentInteractionListener {
+//        fun onFragmentInteraction(uri: Uri)
+//    }
 }

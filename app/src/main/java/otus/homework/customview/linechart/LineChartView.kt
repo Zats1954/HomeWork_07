@@ -12,7 +12,6 @@ import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
 import android.widget.Toast
-import otus.homework.customview.linechart.LineChartModel
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -93,11 +92,11 @@ class LineChartView : View {
         else
             (stopX - startX) / 2.0f
 
-        try {
-            scaleAmount = (stopY - startY) / lineChartModel.maxAmount
+        scaleAmount = try {
+            (stopY - startY) / lineChartModel.maxAmount
         } catch (e: NullPointerException) {
             Toast.makeText(context, "Нет данных ", Toast.LENGTH_LONG).show()
-            scaleAmount = 0f
+            0f
         }
 
         lineChartModel.grafData.forEach { t, u ->

@@ -37,15 +37,6 @@ class ChartModel : ViewModel() {
 
     fun pieGrafData() = MainActivity.myData.groupingBy {it.category }
         .fold(0) { summ, category -> summ + category.amount }
-
-    fun loadData(): List<PayLoad> {
-        val gson = Gson()
-        val type = object : TypeToken<List<PayLoad>>() {}.type
-        myResource.reset()
-        val myJson = myResource.bufferedReader(Charset.defaultCharset())
-        return gson.fromJson(myJson, type)
-    }
-
     fun setScale(sector: Int) {
         scaleArc = scaleArc.mapIndexed { index, _ ->
             if (index == sector)
