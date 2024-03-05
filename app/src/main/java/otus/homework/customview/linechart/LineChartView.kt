@@ -170,11 +170,10 @@ class LineChartView : View {
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
         gestureDetector.onTouchEvent(event)
-
         return super.onTouchEvent(event)
     }
 
-    fun convertLongToTime(time: Long): String {
+    private fun convertLongToTime(time: Long): String {
         val date = Date(time)
         val format = SimpleDateFormat("MM.dd HH:mm:ss")
         return format.format(date)

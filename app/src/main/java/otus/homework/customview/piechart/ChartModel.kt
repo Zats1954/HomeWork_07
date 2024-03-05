@@ -1,12 +1,7 @@
 package otus.homework.customview.piechart
 
 import androidx.lifecycle.ViewModel
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import otus.homework.customview.MainActivity
-import otus.homework.customview.MyApp.Companion.myResource
-import otus.homework.customview.PayLoad
-import java.nio.charset.Charset
 import java.util.*
 import java.util.Collections.emptyList
 

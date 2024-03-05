@@ -22,60 +22,8 @@ class Tab1Fragment : Fragment(R.layout.fragment_tab1) {
         val binding = FragmentTab1Binding.bind(view)
         binding.chartView.chartModel = chartModel
         image = binding.imageView
-
-//        var animationSet = AnimationSet(true)
-//        var  animeRotate = RotateAnimation(360f, 0f,
-//            RotateAnimation.RELATIVE_TO_SELF,0.5F,
-//            RotateAnimation.RELATIVE_TO_SELF,0.5F)
-//        var animeScale = ScaleAnimation(1f,0f,1f,0f,
-//            ScaleAnimation.RELATIVE_TO_SELF,0.5F,
-//            ScaleAnimation.RELATIVE_TO_SELF,0.5F)
-//         animationSet.addAnimation(animeScale)
-//        animationSet.addAnimation(animeRotate)
-//         animationSet.duration = 2000L
-//        image.startAnimation(animationSet)
-
-
-////        animeRotate = RotateAnimation(0f, 360f,
-////            RotateAnimation.RELATIVE_TO_SELF,0.5F,
-////            RotateAnimation.RELATIVE_TO_SELF,0.5F)
-////        animeScale = ScaleAnimation(0f,1f,0f,1f,
-////            ScaleAnimation.RELATIVE_TO_SELF,0.5F,
-////            ScaleAnimation.RELATIVE_TO_SELF,0.5F)
-////        animationSet.addAnimation(animeScale)
-////        animationSet.addAnimation(animeRotate)
-////        animationSet.duration = 2000L
-////        image.startAnimation(animationSet)
-//
-////
-////            val alphaAnimator = ObjectAnimator.ofFloat(view,"alpha", 1f,0f,1f)
-////
-////            val rotateAnimator = ObjectAnimator.ofFloat(view,"rotation", 0f,360f)
-////
-////            val scaleXAnimator = ObjectAnimator.ofFloat(view,"scaleX",1F,0F)
-////            val scaleYAnimator = ObjectAnimator.ofFloat(view,"scaleY",1F,0F)
-////
-////            animatorSet.play(alphaAnimator).after(rotateAnimator).after(scaleXAnimator)
-////            animatorSet.duration = 2000
-////            animatorSet.start()
-//
-////        animatorSet.playTogether(animeRotate0, scaleYAnimator, scaleXAnimator)
-//
-//        val animeRotate1 = ObjectAnimator.ofFloat(image, "rotation",0f, 360f).apply{
-//            duration = 2000L
-//        }
-//
-//            val animeScale1 = ScaleAnimation(1f,0f,1f,0f,
-//                ScaleAnimation.RELATIVE_TO_SELF,0.5F,
-//                ScaleAnimation.RELATIVE_TO_SELF,0.5F).apply {duration =2000L
-//        }
-////        animeRotate0.start()
-////        image.startAnimation(animeScale0)
-////        animeRotate1.start()
-////        image.startAnimation(animeScale1)
-
-        var animatorSet = AnimatorSet()
-        var animatorSet1 = AnimatorSet()
+        val animatorSet = AnimatorSet()
+        val animatorSet1 = AnimatorSet()
         var animeRotate1 = ObjectAnimator.ofFloat(image, "rotation",360f, 0f)
          var scaleXAnimator = ObjectAnimator.ofFloat(image,"scaleX",1F,0F)
          var scaleYAnimator = ObjectAnimator.ofFloat(image,"scaleY",1F,0F)
