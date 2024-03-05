@@ -9,21 +9,19 @@ import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
 import androidx.lifecycle.MutableLiveData
-import otus.homework.customview.piechart.ChartModel
-import otus.homework.customview.piechart.TouchView
 import kotlin.math.pow
+
 
 class PieChartView : View {
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attributeSet: AttributeSet?) : super(context, attributeSet)
 
-    var chartModel = ChartModel()
-
     lateinit var cycleCenter: PointF
+    var chartModel = ChartModel()
     var _clickSector = MutableLiveData<Int>(-1)
 
     private val gestureDetector = GestureDetector(context, TouchView())
-    private val pChart = Paint()
+    private  val pChart = Paint()
     private val pText = Paint()
     private val rec = RectF()
     private val color = arrayOf(
@@ -74,7 +72,6 @@ class PieChartView : View {
         val size = Math.min(getMeasuredWidth(), getMeasuredHeight())
         val finalWidth = size
         val finalHeight = size
-        System.out.println("finalWidth $finalWidth finalHeight $finalHeight")
         setMeasuredDimension(finalWidth, finalHeight)
     }
 
@@ -84,7 +81,7 @@ class PieChartView : View {
         midWidth = midHeight
         startLeft = width * 0.1f
         startTop = height * 0.1f
-        // Шаблон
+   // Шаблон
         canvas.drawARGB(230, 400, 150, 50)
 // Сдвиг для правильного отображения в landscape
         canvas.translate(0f, height / 4f)

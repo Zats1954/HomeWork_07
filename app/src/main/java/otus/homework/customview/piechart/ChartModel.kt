@@ -18,24 +18,24 @@ class ChartModel : ViewModel() {
 
     init {
         pieData = pieGrafData()
-        sumData = pieData.map{it.value}.sum()
+        sumData = pieData.map { it.value }.sum()
         pieData.forEach { _, i ->
             beginArc.add(startAngle)
             sweepAngle = (i * 360f) / sumData
             lengthArc.add(sweepAngle)
-            System.out.println("startAngle $startAngle")
             startAngle += sweepAngle
         }
         scaleArc = emptyList()
-        scaleArc = pieData.map {_ ->  1.0f}
+        scaleArc = pieData.map { _ -> 1.0f }
     }
 
-    fun pieGrafData() = MainActivity.myData.groupingBy {it.category }
+    fun pieGrafData() = MainActivity.myData.groupingBy { it.category }
         .fold(0) { summ, category -> summ + category.amount }
+
     fun setScale(sector: Int) {
         scaleArc = scaleArc.mapIndexed { index, _ ->
             if (index == sector)
-                1.05f
+                1.1f
             else
                 1.0f
         }
