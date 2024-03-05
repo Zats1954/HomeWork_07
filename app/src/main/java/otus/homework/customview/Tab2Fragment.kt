@@ -6,6 +6,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import otus.homework.customview.databinding.FragmentTab2Binding
+import otus.homework.customview.linechart.LineChartModel
 
 class Tab2Fragment : Fragment(R.layout.fragment_tab2) {
     val chartModel: LineChartModel by viewModels()

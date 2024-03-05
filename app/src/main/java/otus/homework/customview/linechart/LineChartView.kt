@@ -12,7 +12,7 @@ import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
 import android.widget.Toast
-import otus.homework.customview.LineChartModel
+import otus.homework.customview.linechart.LineChartModel
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -139,9 +139,9 @@ class LineChartView : View {
         val startTime = convertLongToTime(lineChartModel.minTime)
         val stopTime = convertLongToTime(lineChartModel.maxTime)
         canvas.drawText(startTime,
-               startX,
+            startX,
             stopY + pChart.textSize,
-               pChart
+            pChart
         )
         canvas.drawText(
             stopTime,

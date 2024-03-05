@@ -1,6 +1,7 @@
-package otus.homework.customview
+package otus.homework.customview.linechart
 
 import androidx.lifecycle.ViewModel
+import otus.homework.customview.MainActivity
 
 class LineChartModel : ViewModel() {
 
@@ -22,3 +23,4 @@ class LineChartModel : ViewModel() {
         minTime = grafData.minOf { it.key }
     }
 }
+
